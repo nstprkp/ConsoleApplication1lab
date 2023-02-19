@@ -1,26 +1,23 @@
-﻿#include <stdio.h>
-#include <stdlib.h>
+#include "header.h"
 
-struct person
+enum Gender
 {
-    int age;
-    char name[20];
+    MALE,
+    FEMALE
 };
 
-struct phone
+struct product
 {
-    int number;
-    int size;
+    char name[100];
+    int price;
+    int kol;
+    enum Gender gend;
 
 };
 
 int main()
 {
-    struct person people[] = { {23, "Tom"}, {32, "Bob"}, {26, "Alice"}, {41, "Sam"} };
-    int n = sizeof(people) / sizeof(people[0]);
-    for (int i = 0; i < n; i++)
-    {
-        printf("Name:%s \t Age: %d \n", people[i].name, people[i].age);
-    }
+    menu();
+    work_prog();
     return 0;
 }
