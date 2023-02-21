@@ -91,7 +91,7 @@ void delte_elem(struct product* mas, int n)
 {
     printf("Choose number of struct that you want to delete (1..%d): ", n);
     int nom = input_check_del(n); nom--;
-    for (int i = nom; i < n; i++) {
+    for (int i = nom; i < n-1; i++) {
         mas[i] = mas[i + 1];
     }
     n--;
