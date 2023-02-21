@@ -38,7 +38,7 @@ int input_check_mf()
 int input_check_del(int n)
 {
     int val;
-    while (scanf_s("%d", &val) != 1 || getchar() != '\n' || (val<1 && val>n)) {
+    while (scanf_s("%d", &val) != 1 || getchar() != '\n' || (val<1 || val>n)) {
         printf("Wrong! Try again.\n");
         rewind(stdin);
     }
